@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "whisperlib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jangmino/whisperlib.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "cffc37de6723ddc7ce3e521facb2a256344a4c49"
+      }
+    }
+  ],
+  "version" : 2
+}
