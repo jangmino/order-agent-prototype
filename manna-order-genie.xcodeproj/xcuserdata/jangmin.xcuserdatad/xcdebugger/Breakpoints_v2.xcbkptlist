@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "1B23F247-F156-4972-A9DF-7B884A66E59D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B5D6CF6B-5046-4DFC-A17A-31B361DE72F5"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "manna-order-genie/Models/WhisperContext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "fullTranscribe(samples:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B5D6CF6B-5046-4DFC-A17A-31B361DE72F5 - daaa29b914a4e635"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.UnsafeBufferPointer&lt;Swift.Float&gt;) -&gt; () in closure #1 (Swift.UnsafePointer&lt;Swift.Int8&gt;) -&gt; () in manna_order_genie.WhisperContext.fullTranscribe(samples: Swift.Array&lt;Swift.Float&gt;) -&gt; ()"
+                  moduleName = "manna-order-genie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangmin/work/Development/manna-order-genie/manna-order-genie/Models/WhisperContext.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "48"
+                  endingLineNumber = "48"
+                  offsetFromSymbolStart = "120">
+               </Location>
+               <Location
+                  uuid = "B5D6CF6B-5046-4DFC-A17A-31B361DE72F5 - daaa29b914a4e614"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.UnsafeBufferPointer&lt;Swift.Float&gt;) -&gt; () in closure #1 (Swift.UnsafePointer&lt;Swift.Int8&gt;) -&gt; () in manna_order_genie.WhisperContext.fullTranscribe(samples: Swift.Array&lt;Swift.Float&gt;) -&gt; ()"
+                  moduleName = "manna-order-genie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangmin/work/Development/manna-order-genie/manna-order-genie/Models/WhisperContext.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "49"
+                  endingLineNumber = "49"
+                  offsetFromSymbolStart = "1236">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "443FBF39-EB7C-4198-9C32-29D8F6A2A674"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5808"
+            endingLineNumber = "5808"
+            landmarkName = "whisper_full_parallel(ctx, params, samples, n_samples, n_processors)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "443FBF39-EB7C-4198-9C32-29D8F6A2A674 - 7ff50326c006f59d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "whisper_full_parallel"
+                  moduleName = "manna-order-genie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangmin/Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5808"
+                  endingLineNumber = "5808"
+                  offsetFromSymbolStart = "52">
+               </Location>
+               <Location
+                  uuid = "443FBF39-EB7C-4198-9C32-29D8F6A2A674 - 7ff50326c006f47a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "whisper_full_parallel"
+                  moduleName = "manna-order-genie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangmin/Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "5811"
+                  endingLineNumber = "5811"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D2429AE5-C91A-4D5D-BE78-1764CF3859EF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5035"
+            endingLineNumber = "5035"
+            landmarkName = "whisper_full_with_state(ctx, state, params, samples, n_samples)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "979442E3-9F1B-4DBB-A17D-DF492426781F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5083"
+            endingLineNumber = "5083"
+            landmarkName = "whisper_full_with_state(ctx, state, params, samples, n_samples)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "88C322AB-CB58-4E5A-925A-A057D0F53985"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5135"
+            endingLineNumber = "5135"
+            landmarkName = "whisper_full_with_state(ctx, state, params, samples, n_samples)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7DEE1FC-0B6A-4E8F-AF97-851FE5918313"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "5156"
+            endingLineNumber = "5156"
+            landmarkName = "whisper_full_with_state(ctx, state, params, samples, n_samples)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5BA19D42-F29F-4909-B8FC-E137812EE5E1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/whisper.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "2065"
+            endingLineNumber = "2065"
+            landmarkName = "whisper_encode_internal(wctx, wstate, mel_offset, n_threads, abort_callback, abort_callback_data)"
+            landmarkType = "9">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0F39D5E5-0A7D-4149-9032-DCC55537B0F0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/ggml.c"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18125"
+            endingLineNumber = "18125"
+            landmarkName = "ggml_graph_compute(cgraph, cplan)"
+            landmarkType = "9">
+            <Locations>
+               <Location
+                  uuid = "0F39D5E5-0A7D-4149-9032-DCC55537B0F0 - 33c0fde7d2ec01ff"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ggml_graph_compute"
+                  moduleName = "manna-order-genie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangmin/Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/ggml.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18125"
+                  endingLineNumber = "18125"
+                  offsetFromSymbolStart = "320">
+               </Location>
+               <Location
+                  uuid = "0F39D5E5-0A7D-4149-9032-DCC55537B0F0 - 88e4e472c19b007a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ggml_graph_export"
+                  moduleName = "manna-order-genie"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/jangmin/Library/Developer/Xcode/DerivedData/manna-order-genie-cggaqhhutrqkxkgvuxabovpvioto/SourcePackages/checkouts/whisperlib/Sources/whisperlib/ggml.c"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18132"
+                  endingLineNumber = "18132"
+                  offsetFromSymbolStart = "2464">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

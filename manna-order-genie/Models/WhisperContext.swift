@@ -45,8 +45,9 @@ actor WhisperContext {
             whisper_reset_timings(context)
             print("About to run whisper_full")
             samples.withUnsafeBufferPointer { samples in
-                if (whisper_full(context, params, samples.baseAddress, Int32(samples.count)) != 0) {
-                    print("Failed to run the model")
+                let ret_code = whisper_full(context, params, samples.baseAddress, Int32(samples.count))
+                if (ret_code != 0) {
+                    print("Failed to run the model \(ret_code)")
                 } else {
                     whisper_print_timings(context)
                 }

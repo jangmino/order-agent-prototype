@@ -11,11 +11,15 @@
 		ADC3F2502B98034000697A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24F2B98034000697A78 /* ContentView.swift */; };
 		ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F2512B98034100697A78 /* Assets.xcassets */; };
 		ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F2542B98034100697A78 /* Preview Assets.xcassets */; };
-		ADC3F25D2B98043600697A78 /* whisperlib in Frameworks */ = {isa = PBXBuildFile; productRef = ADC3F25C2B98043600697A78 /* whisperlib */; };
 		ADC3F2632B982D5B00697A78 /* WhisperState.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F2622B982D5B00697A78 /* WhisperState.swift */; };
 		ADC3F2672B982D7A00697A78 /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F2652B982D7A00697A78 /* Recorder.swift */; };
 		ADC3F2682B982D7A00697A78 /* RiffWaveUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F2662B982D7A00697A78 /* RiffWaveUtils.swift */; };
 		ADC3F26A2B982DC600697A78 /* WhisperContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F2692B982DC600697A78 /* WhisperContext.swift */; };
+		ADC3F27D2B9851A800697A78 /* ggml-base-q5_1.bin in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F27C2B9851A800697A78 /* ggml-base-q5_1.bin */; };
+		ADC3F27F2B9851B100697A78 /* jfk.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F27E2B9851B100697A78 /* jfk.wav */; };
+		ADC3F28C2B98C0EE00697A78 /* whisperlib in Frameworks */ = {isa = PBXBuildFile; productRef = ADC3F28B2B98C0EE00697A78 /* whisperlib */; };
+		ADC3F28E2B98D7F900697A78 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F28D2B98D7F900697A78 /* .gitignore */; };
+		ADC3F2902B98D81E00697A78 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F28F2B98D81E00697A78 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,11 @@
 		ADC3F2652B982D7A00697A78 /* Recorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		ADC3F2662B982D7A00697A78 /* RiffWaveUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RiffWaveUtils.swift; sourceTree = "<group>"; };
 		ADC3F2692B982DC600697A78 /* WhisperContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhisperContext.swift; sourceTree = "<group>"; };
+		ADC3F27C2B9851A800697A78 /* ggml-base-q5_1.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-base-q5_1.bin"; sourceTree = "<group>"; };
+		ADC3F27E2B9851B100697A78 /* jfk.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = jfk.wav; sourceTree = "<group>"; };
+		ADC3F2802B9851CB00697A78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ADC3F28D2B98D7F900697A78 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		ADC3F28F2B98D81E00697A78 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC3F25D2B98043600697A78 /* whisperlib in Frameworks */,
+				ADC3F28C2B98C0EE00697A78 /* whisperlib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +70,8 @@
 		ADC3F24C2B98034000697A78 /* manna-order-genie */ = {
 			isa = PBXGroup;
 			children = (
+				ADC3F2802B9851CB00697A78 /* Info.plist */,
+				ADC3F2792B98512D00697A78 /* Resources */,
 				ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */,
 				ADC3F2642B982D6B00697A78 /* Utils */,
 				ADC3F2612B982D4D00697A78 /* Models */,
@@ -105,6 +116,33 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		ADC3F2792B98512D00697A78 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3F27B2B98514200697A78 /* samples */,
+				ADC3F27A2B98513900697A78 /* models */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ADC3F27A2B98513900697A78 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3F27C2B9851A800697A78 /* ggml-base-q5_1.bin */,
+				ADC3F28F2B98D81E00697A78 /* .gitignore */,
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		ADC3F27B2B98514200697A78 /* samples */ = {
+			isa = PBXGroup;
+			children = (
+				ADC3F27E2B9851B100697A78 /* jfk.wav */,
+				ADC3F28D2B98D7F900697A78 /* .gitignore */,
+			);
+			path = samples;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -122,7 +160,7 @@
 			);
 			name = "manna-order-genie";
 			packageProductDependencies = (
-				ADC3F25C2B98043600697A78 /* whisperlib */,
+				ADC3F28B2B98C0EE00697A78 /* whisperlib */,
 			);
 			productName = "manna-order-genie";
 			productReference = ADC3F24A2B98034000697A78 /* manna-order-genie.app */;
@@ -153,7 +191,7 @@
 			);
 			mainGroup = ADC3F2412B98034000697A78;
 			packageReferences = (
-				ADC3F25B2B98043600697A78 /* XCRemoteSwiftPackageReference "whisperlib" */,
+				ADC3F28A2B98C0EE00697A78 /* XCRemoteSwiftPackageReference "whisperlib" */,
 			);
 			productRefGroup = ADC3F24B2B98034000697A78 /* Products */;
 			projectDirPath = "";
@@ -169,8 +207,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADC3F28E2B98D7F900697A78 /* .gitignore in Resources */,
 				ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */,
 				ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */,
+				ADC3F27F2B9851B100697A78 /* jfk.wav in Resources */,
+				ADC3F2902B98D81E00697A78 /* .gitignore in Resources */,
+				ADC3F27D2B9851A800697A78 /* ggml-base-q5_1.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,8 +365,10 @@
 				DEVELOPMENT_TEAM = 458277H4FQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "manna-order-genie/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Manna Order Genie";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is needed to use this application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -357,8 +401,10 @@
 				DEVELOPMENT_TEAM = 458277H4FQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "manna-order-genie/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Manna Order Genie";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Microphone is needed to use this application";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -404,20 +450,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		ADC3F25B2B98043600697A78 /* XCRemoteSwiftPackageReference "whisperlib" */ = {
+		ADC3F28A2B98C0EE00697A78 /* XCRemoteSwiftPackageReference "whisperlib" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/jangmino/whisperlib.git";
 			requirement = {
-				branch = main;
+				branch = llama_integration;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		ADC3F25C2B98043600697A78 /* whisperlib */ = {
+		ADC3F28B2B98C0EE00697A78 /* whisperlib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = ADC3F25B2B98043600697A78 /* XCRemoteSwiftPackageReference "whisperlib" */;
+			package = ADC3F28A2B98C0EE00697A78 /* XCRemoteSwiftPackageReference "whisperlib" */;
 			productName = whisperlib;
 		};
 /* End XCSwiftPackageProductDependency section */
