@@ -18,8 +18,6 @@
 		ADC3F27D2B9851A800697A78 /* ggml-base-q5_1.bin in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F27C2B9851A800697A78 /* ggml-base-q5_1.bin */; };
 		ADC3F27F2B9851B100697A78 /* jfk.wav in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F27E2B9851B100697A78 /* jfk.wav */; };
 		ADC3F28C2B98C0EE00697A78 /* whisperlib in Frameworks */ = {isa = PBXBuildFile; productRef = ADC3F28B2B98C0EE00697A78 /* whisperlib */; };
-		ADC3F28E2B98D7F900697A78 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F28D2B98D7F900697A78 /* .gitignore */; };
-		ADC3F2902B98D81E00697A78 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F28F2B98D81E00697A78 /* .gitignore */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -207,11 +205,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ADC3F28E2B98D7F900697A78 /* .gitignore in Resources */,
 				ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */,
 				ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */,
 				ADC3F27F2B9851B100697A78 /* jfk.wav in Resources */,
-				ADC3F2902B98D81E00697A78 /* .gitignore in Resources */,
 				ADC3F27D2B9851A800697A78 /* ggml-base-q5_1.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
