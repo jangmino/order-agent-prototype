@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD51364F2B99559100D5B85F /* gemma-2b-it_Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD51364E2B99559100D5B85F /* gemma-2b-it_Q4_K_M.gguf */; };
+		AD5136512B99561C00D5B85F /* LlamaContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136502B99561C00D5B85F /* LlamaContext.swift */; };
+		AD5136532B99566900D5B85F /* LlamaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136522B99566900D5B85F /* LlamaState.swift */; };
 		ADC3F24E2B98034000697A78 /* manna_order_genieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */; };
 		ADC3F2502B98034000697A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24F2B98034000697A78 /* ContentView.swift */; };
 		ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F2512B98034100697A78 /* Assets.xcassets */; };
@@ -21,6 +24,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD51364E2B99559100D5B85F /* gemma-2b-it_Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it_Q4_K_M.gguf"; sourceTree = "<group>"; };
+		AD5136502B99561C00D5B85F /* LlamaContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaContext.swift; sourceTree = "<group>"; };
+		AD5136522B99566900D5B85F /* LlamaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaState.swift; sourceTree = "<group>"; };
 		ADC3F24A2B98034000697A78 /* manna-order-genie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "manna-order-genie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manna_order_genieApp.swift; sourceTree = "<group>"; };
 		ADC3F24F2B98034000697A78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -101,6 +107,8 @@
 			children = (
 				ADC3F2622B982D5B00697A78 /* WhisperState.swift */,
 				ADC3F2692B982DC600697A78 /* WhisperContext.swift */,
+				AD5136502B99561C00D5B85F /* LlamaContext.swift */,
+				AD5136522B99566900D5B85F /* LlamaState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -126,6 +134,7 @@
 		ADC3F27A2B98513900697A78 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				AD51364E2B99559100D5B85F /* gemma-2b-it_Q4_K_M.gguf */,
 				ADC3F27C2B9851A800697A78 /* ggml-base-q5_1.bin */,
 				ADC3F28F2B98D81E00697A78 /* .gitignore */,
 			);
@@ -206,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */,
+				AD51364F2B99559100D5B85F /* gemma-2b-it_Q4_K_M.gguf in Resources */,
 				ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */,
 				ADC3F27F2B9851B100697A78 /* jfk.wav in Resources */,
 				ADC3F27D2B9851A800697A78 /* ggml-base-q5_1.bin in Resources */,
@@ -222,8 +232,10 @@
 				ADC3F26A2B982DC600697A78 /* WhisperContext.swift in Sources */,
 				ADC3F2502B98034000697A78 /* ContentView.swift in Sources */,
 				ADC3F2682B982D7A00697A78 /* RiffWaveUtils.swift in Sources */,
+				AD5136532B99566900D5B85F /* LlamaState.swift in Sources */,
 				ADC3F24E2B98034000697A78 /* manna_order_genieApp.swift in Sources */,
 				ADC3F2632B982D5B00697A78 /* WhisperState.swift in Sources */,
+				AD5136512B99561C00D5B85F /* LlamaContext.swift in Sources */,
 				ADC3F2672B982D7A00697A78 /* Recorder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
