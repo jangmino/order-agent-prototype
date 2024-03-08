@@ -24,53 +24,73 @@ struct ContentView: View {
         NavigationStack {
             VStack {
                 HStack {
-                    Button("Transcribe", action: {
-                        Task {
-                            await whisperState.transcribeSample()
-                        }
-                    })
-                    .buttonStyle(.bordered)
-                    .disabled(!whisperState.canTranscribe)
                     
-                    Button(whisperState.isRecording ? "Stop recording" : "Start recording", action: {
+                    Button(whisperState.isRecording ? "음성 주문 종료" : "음성 주문 시작", action: {
                         Task {
+                            llamaState.generatedText = ""
                             await whisperState.toggleRecord()
+                            if whisperState.transcripedText != "" {
+                                await llamaState.complete(text: whisperState.transcripedText)
+                            }
                         }
                     })
                     .buttonStyle(.bordered)
+                    .font(.system(size: 14, weight: .semibold))
                     .disabled(!whisperState.canTranscribe)
                 }
+                .padding()
+                
+                VStack {
+                    Text(whisperState.transcripedText)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.blue)
+                    
+                    Text(llamaState.generatedText)
+                        .font(.system(size: 14, weight: .semibold))
+                        .foregroundStyle(.red)
+                }
+                .padding()
                 
                 ScrollView {
-                    Text(verbatim: whisperState.messageLog)
+                    Text(whisperState.messageLog)
+                        .font(.system(size: 12, weight: .semibold))
                         .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding()
                 }
                 
                 ScrollView(.vertical, showsIndicators: true) {
                     Text(llamaState.messageLog)
-                        .font(.system(size: 12))
+                        .font(.system(size: 12, weight: .semibold))
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                         .onTapGesture {
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         }
                 }
+//
+//                
+//                HStack {
+//                    Button("Send") {
+//                        sendText()
+//                    }
+//                    .buttonStyle(.bordered)
+//                }
                 
-                HStack {
-                    Button("Send") {
-                        sendText()
-                    }
-                }
             }
-            .navigationTitle("Manna Genie Order")
+            .navigationTitle("Manna Order Genie")
             .padding()
+        }.onAppear {
+            Task {
+                await whisperState.loadModels()
+                await llamaState.loadModels()
+            }
         }
     }
     
     func sendText() {
         Task {
 //            await llamaState.complete(text: llm_prefix + multiLineText + "<end_of_turn>\n<start_of_turn>model\n")
-            await llamaState.complete(text: multiLineText)
+            await llamaState.complete(text: whisperState.transcripedText)
 //            multiLineText = ""
         }
     }

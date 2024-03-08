@@ -6,6 +6,7 @@ import AVFoundation
 class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     @Published var isModelLoaded = false
     @Published var messageLog = ""
+    @Published var transcripedText = ""
     @Published var canTranscribe = false
     @Published var isRecording = false
     
@@ -13,9 +14,11 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     private let recorder = Recorder()
     private var recordedFile: URL? = nil
     private var audioPlayer: AVAudioPlayer?
+    private var isdummy: Bool = false
     
     private var modelUrl: URL? {
-        Bundle.main.url(forResource: "ggml-base-q5_1", withExtension: "bin", subdirectory: ".")
+        Bundle.main.url(forResource: "ggml-medium.q4_k", withExtension: "bin", subdirectory: ".")
+//        Bundle.main.url(forResource: "ggml-base-q5_1", withExtension: "bin", subdirectory: ".")
     }
     
     private var sampleUrl: URL? {
@@ -28,27 +31,46 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     
     init(isdummy:Bool = false) {
         super.init()
-        if isdummy {
+        self.isdummy = isdummy
+    }
+    
+    func loadModels() async {
+        guard let modelUrl = modelUrl, !isdummy else {
+            self.messageLog += "WhisperState: Coud not locate model\n"
             return
         }
-        do {
-            try loadModel()
-            canTranscribe = true
-        } catch {
-            print(error.localizedDescription)
-            messageLog += "\(error.localizedDescription)\n"
+        await withCheckedContinuation { continuation in
+            // 백그라운드 스레드에서 비동기 작업을 수행
+            print("start of initialize: \(#file)")
+            DispatchQueue.global(qos: .userInitiated).async {
+                do {
+                    let whisperContext = try WhisperContext.createContext(path: modelUrl.path())
+                    DispatchQueue.main.async {
+                        self.whisperContext = whisperContext
+                        self.messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
+                        self.canTranscribe = true
+                        continuation.resume()
+                        print("end of initialize: \(#file)")
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.messageLog += "Could not locate model\n"
+                        continuation.resume(throwing: error as! Never)
+                    }
+                }
+            }
         }
     }
     
-    private func loadModel() throws {
-        messageLog += "Loading model...\n"
-        if let modelUrl {
-            whisperContext = try WhisperContext.createContext(path: modelUrl.path())
-            messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
-        } else {
-            messageLog += "Could not locate model\n"
-        }
-    }
+//    private func loadModel() async throws {
+//        messageLog += "Loading model...\n"
+//        if let modelUrl {
+//            whisperContext = try WhisperContext.createContext(path: modelUrl.path())
+//            messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
+//        } else {
+//            messageLog += "Could not locate model\n"
+//        }
+//    }
     
     func transcribeSample() async {
         if let sampleUrl {
@@ -74,6 +96,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
             await whisperContext.fullTranscribe(samples: data)
             let text = await whisperContext.getTranscription()
             messageLog += "Done: \(text)\n"
+            transcripedText = text
         } catch {
             print(error.localizedDescription)
             messageLog += "\(error.localizedDescription)\n"
@@ -89,6 +112,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     }
     
     func toggleRecord() async {
+        transcripedText = ""
         if isRecording {
             await recorder.stopRecording()
             isRecording = false

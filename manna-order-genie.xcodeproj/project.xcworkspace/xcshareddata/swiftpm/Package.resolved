@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/jangmino/whisperlib.git",
       "state" : {
-        "branch" : "llama_integration",
-        "revision" : "040ab8edcceebc59641d48683536baeedc57d172"
+        "branch" : "feat_metal",
+        "revision" : "166f4d11628e89b8bb434934d355c53a1c5800da"
       }
     }
   ],

@@ -18,25 +18,68 @@ struct Model: Identifiable {
 @MainActor
 class LlamaState: ObservableObject {
     @Published var messageLog = ""
+    @Published var generatedText = ""
     @Published var cacheCleared = false
     @Published var downloadedModels: [Model] = []
     @Published var undownloadedModels: [Model] = []
     let NS_PER_S = 1_000_000_000.0
 
+    private var isdummy: Bool = false
     private var llamaContext: LlamaContext?
     private var defaultModelUrl: URL? {
         Bundle.main.url(forResource: "gemma-2b-it_Q4_K_M", withExtension: "gguf", subdirectory: ".")
     }
 
     init(isdummy: Bool = false) {
-        if isdummy {
+        self.isdummy = isdummy
+//        if isdummy {
+//            return
+//        }
+//        print("start...model: \(String(describing: defaultModelUrl))")
+//        
+//        loadModelsFromDisk()
+//        loadDefaultModels()
+    }
+    
+    func loadModels() async {
+        guard let modelUrl = defaultModelUrl, !isdummy else {
+            self.messageLog += "LLamaState: Coud not locate model\n"
             return
         }
-        print("start...model: \(String(describing: defaultModelUrl))")
-        
-        loadModelsFromDisk()
-        loadDefaultModels()
+        await withCheckedContinuation { continuation in
+            // 백그라운드 스레드에서 비동기 작업을 수행
+            print("start of initialize: \(#file)")
+            DispatchQueue.global(qos: .userInitiated).async {
+                do {
+                    let llamaContext = try LlamaContext.create_context(path: modelUrl.path())
+                    DispatchQueue.main.async {
+                        self.llamaContext = llamaContext
+                        self.messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
+                        continuation.resume()
+                        print("end of initialize: \(#file)")
+                    }
+                } catch {
+                    DispatchQueue.main.async {
+                        self.messageLog += "Could not locate model\n"
+                        continuation.resume(throwing: error as! Never)
+                    }
+                }
+            }
+        }
     }
+    
+//    func loadModel(modelUrl: URL?) throws {
+//        if let modelUrl {
+//            messageLog += "Loading model...\n"
+//            llamaContext = try LlamaContext.create_context(path: modelUrl.path())
+//            messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
+//
+//            // Assuming that the model is successfully loaded, update the downloaded models
+//            updateDownloadedModels(modelName: modelUrl.lastPathComponent, status: "downloaded")
+//        } else {
+//            messageLog += "Load a model from the list below\n"
+//        }
+//    }
 
     private func loadModelsFromDisk() {
         do {
@@ -51,24 +94,24 @@ class LlamaState: ObservableObject {
         }
     }
 
-    private func loadDefaultModels() {
-        do {
-            try loadModel(modelUrl: defaultModelUrl)
-        } catch {
-            messageLog += "Error!\n"
-        }
-
-        for model in defaultModels {
-            let fileURL = getDocumentsDirectory().appendingPathComponent(model.filename)
-            if FileManager.default.fileExists(atPath: fileURL.path) {
-
-            } else {
-                var undownloadedModel = model
-                undownloadedModel.status = "download"
-                undownloadedModels.append(undownloadedModel)
-            }
-        }
-    }
+//    private func loadDefaultModels() {
+//        do {
+//            try loadModel(modelUrl: defaultModelUrl)
+//        } catch {
+//            messageLog += "Error!\n"
+//        }
+//
+//        for model in defaultModels {
+//            let fileURL = getDocumentsDirectory().appendingPathComponent(model.filename)
+//            if FileManager.default.fileExists(atPath: fileURL.path) {
+//
+//            } else {
+//                var undownloadedModel = model
+//                undownloadedModel.status = "download"
+//                undownloadedModels.append(undownloadedModel)
+//            }
+//        }
+//    }
 
     func getDocumentsDirectory() -> URL {
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
@@ -111,18 +154,6 @@ class LlamaState: ObservableObject {
             filename: "openhermes-2.5-mistral-7b.Q3_K_M.gguf", status: "download"
         )
     ]
-    func loadModel(modelUrl: URL?) throws {
-        if let modelUrl {
-            messageLog += "Loading model...\n"
-            llamaContext = try LlamaContext.create_context(path: modelUrl.path())
-            messageLog += "Loaded model \(modelUrl.lastPathComponent)\n"
-
-            // Assuming that the model is successfully loaded, update the downloaded models
-            updateDownloadedModels(modelName: modelUrl.lastPathComponent, status: "downloaded")
-        } else {
-            messageLog += "Load a model from the list below\n"
-        }
-    }
 
 
     private func updateDownloadedModels(modelName: String, status: String) {
@@ -134,19 +165,24 @@ class LlamaState: ObservableObject {
         guard let llamaContext else {
             return
         }
+        
+        let prompted_text = "<start_of_turn>user\n너는 사용자가 입력한 주문 문장을 분석하는 에이전트이다. 주문으로부터 이를 구성하는 음식명, 옵션명, 수량을 차례대로 추출해야 한다.\n주문 문장:\(text)<end_of_turn>\n<start_of_turn>model\n"
 
         let t_start = DispatchTime.now().uptimeNanoseconds
-        await llamaContext.completion_init(text: text)
+        await llamaContext.completion_init(text: prompted_text)
         let t_heat_end = DispatchTime.now().uptimeNanoseconds
         let t_heat = Double(t_heat_end - t_start) / NS_PER_S
 
-        messageLog += "\(text)"
+        messageLog += "\(prompted_text)"
+        
+        generatedText = ""
 
         // 다음 코드의 추측: n_len은 늘 고정값이었기 때문에 문제가 없었을 듯
 //        while await llamaContext.n_cur < llamaContext.n_len && MainActor.run { llamaContext.is_eos } {
         while await !llamaContext.is_eos {
             let result = await llamaContext.completion_loop()
             messageLog += "\(result)"
+            generatedText += "\(result)"
         }
 
         let t_end = DispatchTime.now().uptimeNanoseconds
