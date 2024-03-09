@@ -3,10 +3,10 @@
     {
       "identity" : "whisperlib",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/jangmino/whisperlib.git",
+      "location" : "https://github.com/MannaPlanet/whisperlib",
       "state" : {
-        "branch" : "feat_metal",
-        "revision" : "166f4d11628e89b8bb434934d355c53a1c5800da"
+        "branch" : "main",
+        "revision" : "ded2d53f6430995db1af6a3e5bb369272a5a5325"
       }
     }
   ],
