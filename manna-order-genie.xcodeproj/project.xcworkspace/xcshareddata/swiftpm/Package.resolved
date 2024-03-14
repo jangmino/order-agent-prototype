@@ -5,8 +5,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/MannaPlanet/whisperlib",
       "state" : {
-        "branch" : "main",
-        "revision" : "ded2d53f6430995db1af6a3e5bb369272a5a5325"
+        "branch" : "dev_sync_upstream",
+        "revision" : "77648fea3d57bb9dd82fcadedcdc9f79cd25f75f"
       }
     }
   ],

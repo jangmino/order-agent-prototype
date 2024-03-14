@@ -27,7 +27,8 @@ class LlamaState: ObservableObject {
     private var isdummy: Bool = false
     private var llamaContext: LlamaContext?
     private var defaultModelUrl: URL? {
-        Bundle.main.url(forResource: "gemma-2b-it-Q4_K_M", withExtension: "gguf", subdirectory: ".")
+        Bundle.main.url(forResource: "gemma-2b-it-Q3_K_M", withExtension: "gguf", subdirectory: ".")
+//        Bundle.main.url(forResource: "gemma-2b-it-Q4_K_M", withExtension: "gguf", subdirectory: ".")
     }
 
     init(isdummy: Bool = false) {

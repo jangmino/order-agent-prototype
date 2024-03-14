@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD3027702B9C2B8A00D0D454 /* whisperlib in Frameworks */ = {isa = PBXBuildFile; productRef = AD30276F2B9C2B8A00D0D454 /* whisperlib */; };
-		AD3027722B9C2CEF00D0D454 /* gemma-2b-it-Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD3027712B9C2CEF00D0D454 /* gemma-2b-it-Q4_K_M.gguf */; };
 		AD5136512B99561C00D5B85F /* LlamaContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136502B99561C00D5B85F /* LlamaContext.swift */; };
 		AD5136532B99566900D5B85F /* LlamaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136522B99566900D5B85F /* LlamaState.swift */; };
 		AD68F2EF2B9B30150095345A /* ggml-medium.q4_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD68F2EE2B9B30150095345A /* ggml-medium.q4_k.bin */; };
+		AD6AFEFD2B9DA8280099AA8A /* whisperlib in Frameworks */ = {isa = PBXBuildFile; productRef = AD6AFEFC2B9DA8280099AA8A /* whisperlib */; };
+		AD6AFF012B9DA9810099AA8A /* ggml-small.q3_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD6AFF002B9DA9810099AA8A /* ggml-small.q3_k.bin */; };
+		AD6AFF032B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD6AFF022B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf */; };
 		ADC3F24E2B98034000697A78 /* manna_order_genieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */; };
 		ADC3F2502B98034000697A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24F2B98034000697A78 /* ContentView.swift */; };
 		ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F2512B98034100697A78 /* Assets.xcassets */; };
@@ -23,10 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD3027712B9C2CEF00D0D454 /* gemma-2b-it-Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it-Q4_K_M.gguf"; sourceTree = "<group>"; };
 		AD5136502B99561C00D5B85F /* LlamaContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaContext.swift; sourceTree = "<group>"; };
 		AD5136522B99566900D5B85F /* LlamaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaState.swift; sourceTree = "<group>"; };
 		AD68F2EE2B9B30150095345A /* ggml-medium.q4_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-medium.q4_k.bin"; sourceTree = "<group>"; };
+		AD6AFF002B9DA9810099AA8A /* ggml-small.q3_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-small.q3_k.bin"; sourceTree = "<group>"; };
+		AD6AFF022B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it-Q3_K_M.gguf"; sourceTree = "<group>"; };
 		ADC3F24A2B98034000697A78 /* manna-order-genie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "manna-order-genie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manna_order_genieApp.swift; sourceTree = "<group>"; };
 		ADC3F24F2B98034000697A78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -46,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3027702B9C2B8A00D0D454 /* whisperlib in Frameworks */,
+				AD6AFEFD2B9DA8280099AA8A /* whisperlib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +134,8 @@
 		ADC3F27A2B98513900697A78 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				AD3027712B9C2CEF00D0D454 /* gemma-2b-it-Q4_K_M.gguf */,
+				AD6AFF022B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf */,
+				AD6AFF002B9DA9810099AA8A /* ggml-small.q3_k.bin */,
 				AD68F2EE2B9B30150095345A /* ggml-medium.q4_k.bin */,
 				ADC3F28F2B98D81E00697A78 /* .gitignore */,
 			);
@@ -164,7 +167,7 @@
 			);
 			name = "manna-order-genie";
 			packageProductDependencies = (
-				AD30276F2B9C2B8A00D0D454 /* whisperlib */,
+				AD6AFEFC2B9DA8280099AA8A /* whisperlib */,
 			);
 			productName = "manna-order-genie";
 			productReference = ADC3F24A2B98034000697A78 /* manna-order-genie.app */;
@@ -195,7 +198,7 @@
 			);
 			mainGroup = ADC3F2412B98034000697A78;
 			packageReferences = (
-				AD30276E2B9C2B8A00D0D454 /* XCRemoteSwiftPackageReference "whisperlib" */,
+				AD6AFEFB2B9DA8280099AA8A /* XCRemoteSwiftPackageReference "whisperlib" */,
 			);
 			productRefGroup = ADC3F24B2B98034000697A78 /* Products */;
 			projectDirPath = "";
@@ -211,10 +214,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD3027722B9C2CEF00D0D454 /* gemma-2b-it-Q4_K_M.gguf in Resources */,
 				ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */,
+				AD6AFF032B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf in Resources */,
 				AD68F2EF2B9B30150095345A /* ggml-medium.q4_k.bin in Resources */,
 				ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */,
+				AD6AFF012B9DA9810099AA8A /* ggml-small.q3_k.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,20 +458,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AD30276E2B9C2B8A00D0D454 /* XCRemoteSwiftPackageReference "whisperlib" */ = {
+		AD6AFEFB2B9DA8280099AA8A /* XCRemoteSwiftPackageReference "whisperlib" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MannaPlanet/whisperlib";
 			requirement = {
-				branch = main;
+				branch = dev_sync_upstream;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AD30276F2B9C2B8A00D0D454 /* whisperlib */ = {
+		AD6AFEFC2B9DA8280099AA8A /* whisperlib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AD30276E2B9C2B8A00D0D454 /* XCRemoteSwiftPackageReference "whisperlib" */;
+			package = AD6AFEFB2B9DA8280099AA8A /* XCRemoteSwiftPackageReference "whisperlib" */;
 			productName = whisperlib;
 		};
 /* End XCSwiftPackageProductDependency section */
