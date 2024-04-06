@@ -1,12 +1,12 @@
 //
 //  WhisperContext.swift
-//  manna-order-genie
+//  order-agent-prototype
 //
 //  Created by 오장민 on 3/6/24.
 //
 
 import Foundation
-import whisperlib
+import whisperllamalib
 
 enum WhisperError: Error {
     case couldNotInitializeContext

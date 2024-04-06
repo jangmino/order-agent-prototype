@@ -1,6 +1,6 @@
 //
-//  manna_order_genieApp.swift
-//  manna-order-genie
+//  order-agent-prototypeApp.swift
+//  order-agent-prototype
 //
 //  Created by 오장민 on 3/6/24.
 //

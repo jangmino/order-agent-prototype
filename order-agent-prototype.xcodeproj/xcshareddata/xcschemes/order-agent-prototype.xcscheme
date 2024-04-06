@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "ADC3F2492B98034000697A78"
-               BuildableName = "manna-order-genie.app"
-               BlueprintName = "manna-order-genie"
-               ReferencedContainer = "container:manna-order-genie.xcodeproj">
+               BuildableName = "order-agent-prototype.app"
+               BlueprintName = "order-agent-prototype"
+               ReferencedContainer = "container:order-agent-prototype.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -44,9 +44,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADC3F2492B98034000697A78"
-            BuildableName = "manna-order-genie.app"
-            BlueprintName = "manna-order-genie"
-            ReferencedContainer = "container:manna-order-genie.xcodeproj">
+            BuildableName = "order-agent-prototype.app"
+            BlueprintName = "order-agent-prototype"
+            ReferencedContainer = "container:order-agent-prototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </LaunchAction>
@@ -61,9 +61,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "ADC3F2492B98034000697A78"
-            BuildableName = "manna-order-genie.app"
-            BlueprintName = "manna-order-genie"
-            ReferencedContainer = "container:manna-order-genie.xcodeproj">
+            BuildableName = "order-agent-prototype.app"
+            BlueprintName = "order-agent-prototype"
+            ReferencedContainer = "container:order-agent-prototype.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

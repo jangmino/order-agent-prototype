@@ -1,6 +1,6 @@
 //
 //  LlamaState.swift
-//  manna-order-genie
+//  prototype-order-genie
 //
 //  Created by 오장민 on 3/7/24.
 //

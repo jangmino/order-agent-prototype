@@ -1,13 +1,13 @@
 //
 //  ContentView.swift
-//  manna-order-genie
+//  order-agent-prototype
 //
 //  Created by 오장민 on 3/6/24.
 //
 
 import SwiftUI
 import AVFoundation
-import whisperlib
+import whisperllamalib
 
 struct ContentView: View {
     @StateObject var whisperState: WhisperState
@@ -77,7 +77,7 @@ struct ContentView: View {
 //                }
                 
             }
-            .navigationTitle("Manna Order Genie")
+            .navigationTitle("Order Agent Prototype")
             .padding()
         }.onAppear {
             Task {

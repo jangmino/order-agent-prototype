@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4BE04A2BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD4BE0492BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf */; };
+		AD4BE04C2BC13F3000E56C04 /* ggml-small.q3_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD4BE04B2BC13F3000E56C04 /* ggml-small.q3_k.bin */; };
+		AD4BE0612BC1452800E56C04 /* whisperllamalib in Frameworks */ = {isa = PBXBuildFile; productRef = AD4BE0602BC1452800E56C04 /* whisperllamalib */; };
 		AD5136512B99561C00D5B85F /* LlamaContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136502B99561C00D5B85F /* LlamaContext.swift */; };
 		AD5136532B99566900D5B85F /* LlamaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136522B99566900D5B85F /* LlamaState.swift */; };
-		AD68F2EF2B9B30150095345A /* ggml-medium.q4_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD68F2EE2B9B30150095345A /* ggml-medium.q4_k.bin */; };
-		AD6AFEFD2B9DA8280099AA8A /* whisperlib in Frameworks */ = {isa = PBXBuildFile; productRef = AD6AFEFC2B9DA8280099AA8A /* whisperlib */; };
-		AD6AFF012B9DA9810099AA8A /* ggml-small.q3_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD6AFF002B9DA9810099AA8A /* ggml-small.q3_k.bin */; };
-		AD6AFF032B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD6AFF022B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf */; };
 		ADC3F24E2B98034000697A78 /* manna_order_genieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */; };
 		ADC3F2502B98034000697A78 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24F2B98034000697A78 /* ContentView.swift */; };
 		ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADC3F2512B98034100697A78 /* Assets.xcassets */; };
@@ -24,12 +23,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AD4BE0492BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it-Q3_K_M.gguf"; sourceTree = "<group>"; };
+		AD4BE04B2BC13F3000E56C04 /* ggml-small.q3_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-small.q3_k.bin"; sourceTree = "<group>"; };
 		AD5136502B99561C00D5B85F /* LlamaContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaContext.swift; sourceTree = "<group>"; };
 		AD5136522B99566900D5B85F /* LlamaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaState.swift; sourceTree = "<group>"; };
-		AD68F2EE2B9B30150095345A /* ggml-medium.q4_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-medium.q4_k.bin"; sourceTree = "<group>"; };
-		AD6AFF002B9DA9810099AA8A /* ggml-small.q3_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-small.q3_k.bin"; sourceTree = "<group>"; };
-		AD6AFF022B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it-Q3_K_M.gguf"; sourceTree = "<group>"; };
-		ADC3F24A2B98034000697A78 /* manna-order-genie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "manna-order-genie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ADC3F24A2B98034000697A78 /* order-agent-prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "order-agent-prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = manna_order_genieApp.swift; sourceTree = "<group>"; };
 		ADC3F24F2B98034000697A78 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		ADC3F2512B98034100697A78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -48,30 +46,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AD6AFEFD2B9DA8280099AA8A /* whisperlib in Frameworks */,
+				AD4BE0612BC1452800E56C04 /* whisperllamalib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AD4BE05F2BC1452800E56C04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		ADC3F2412B98034000697A78 = {
 			isa = PBXGroup;
 			children = (
-				ADC3F24C2B98034000697A78 /* manna-order-genie */,
+				ADC3F24C2B98034000697A78 /* order-agent-prototype */,
 				ADC3F24B2B98034000697A78 /* Products */,
+				AD4BE05F2BC1452800E56C04 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		ADC3F24B2B98034000697A78 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ADC3F24A2B98034000697A78 /* manna-order-genie.app */,
+				ADC3F24A2B98034000697A78 /* order-agent-prototype.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ADC3F24C2B98034000697A78 /* manna-order-genie */ = {
+		ADC3F24C2B98034000697A78 /* order-agent-prototype */ = {
 			isa = PBXGroup;
 			children = (
 				ADC3F2802B9851CB00697A78 /* Info.plist */,
@@ -83,7 +89,7 @@
 				ADC3F2512B98034100697A78 /* Assets.xcassets */,
 				ADC3F2532B98034100697A78 /* Preview Content */,
 			);
-			path = "manna-order-genie";
+			path = "order-agent-prototype";
 			sourceTree = "<group>";
 		};
 		ADC3F2532B98034100697A78 /* Preview Content */ = {
@@ -134,9 +140,8 @@
 		ADC3F27A2B98513900697A78 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				AD6AFF022B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf */,
-				AD6AFF002B9DA9810099AA8A /* ggml-small.q3_k.bin */,
-				AD68F2EE2B9B30150095345A /* ggml-medium.q4_k.bin */,
+				AD4BE04B2BC13F3000E56C04 /* ggml-small.q3_k.bin */,
+				AD4BE0492BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf */,
 				ADC3F28F2B98D81E00697A78 /* .gitignore */,
 			);
 			path = models;
@@ -153,9 +158,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ADC3F2492B98034000697A78 /* manna-order-genie */ = {
+		ADC3F2492B98034000697A78 /* order-agent-prototype */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ADC3F2582B98034100697A78 /* Build configuration list for PBXNativeTarget "manna-order-genie" */;
+			buildConfigurationList = ADC3F2582B98034100697A78 /* Build configuration list for PBXNativeTarget "order-agent-prototype" */;
 			buildPhases = (
 				ADC3F2462B98034000697A78 /* Sources */,
 				ADC3F2472B98034000697A78 /* Frameworks */,
@@ -165,12 +170,12 @@
 			);
 			dependencies = (
 			);
-			name = "manna-order-genie";
+			name = "order-agent-prototype";
 			packageProductDependencies = (
-				AD6AFEFC2B9DA8280099AA8A /* whisperlib */,
+				AD4BE0602BC1452800E56C04 /* whisperllamalib */,
 			);
-			productName = "manna-order-genie";
-			productReference = ADC3F24A2B98034000697A78 /* manna-order-genie.app */;
+			productName = "order-agent-prototype";
+			productReference = ADC3F24A2B98034000697A78 /* order-agent-prototype.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -188,7 +193,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ADC3F2452B98034000697A78 /* Build configuration list for PBXProject "manna-order-genie" */;
+			buildConfigurationList = ADC3F2452B98034000697A78 /* Build configuration list for PBXProject "order-agent-prototype" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -198,13 +203,13 @@
 			);
 			mainGroup = ADC3F2412B98034000697A78;
 			packageReferences = (
-				AD6AFEFB2B9DA8280099AA8A /* XCRemoteSwiftPackageReference "whisperlib" */,
+				AD4BE05C2BC1444D00E56C04 /* XCRemoteSwiftPackageReference "whisper-llama-lib" */,
 			);
 			productRefGroup = ADC3F24B2B98034000697A78 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ADC3F2492B98034000697A78 /* manna-order-genie */,
+				ADC3F2492B98034000697A78 /* order-agent-prototype */,
 			);
 		};
 /* End PBXProject section */
@@ -215,10 +220,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */,
-				AD6AFF032B9DCEDD0099AA8A /* gemma-2b-it-Q3_K_M.gguf in Resources */,
-				AD68F2EF2B9B30150095345A /* ggml-medium.q4_k.bin in Resources */,
+				AD4BE04A2BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf in Resources */,
 				ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */,
-				AD6AFF012B9DA9810099AA8A /* ggml-small.q3_k.bin in Resources */,
+				AD4BE04C2BC13F3000E56C04 /* ggml-small.q3_k.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +373,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"manna-order-genie/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"order-agent-prototype/Preview Content\"";
 				DEVELOPMENT_TEAM = 458277H4FQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "manna-order-genie/Info.plist";
+				INFOPLIST_FILE = "order-agent-prototype/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Manna Order Genie";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access in order to transcribe speech.";
@@ -386,8 +390,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jangmin.whisper-objc";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jangmin.order-agent-prototype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -405,11 +409,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"manna-order-genie/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"order-agent-prototype/Preview Content\"";
 				DEVELOPMENT_TEAM = 458277H4FQ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "manna-order-genie/Info.plist";
+				INFOPLIST_FILE = "order-agent-prototype/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Manna Order Genie";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access in order to transcribe speech.";
@@ -422,8 +426,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.2;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.jangmin.whisper-objc";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jangmin.order-agent-prototype";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -437,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ADC3F2452B98034000697A78 /* Build configuration list for PBXProject "manna-order-genie" */ = {
+		ADC3F2452B98034000697A78 /* Build configuration list for PBXProject "order-agent-prototype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADC3F2562B98034100697A78 /* Debug */,
@@ -446,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ADC3F2582B98034100697A78 /* Build configuration list for PBXNativeTarget "manna-order-genie" */ = {
+		ADC3F2582B98034100697A78 /* Build configuration list for PBXNativeTarget "order-agent-prototype" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ADC3F2592B98034100697A78 /* Debug */,
@@ -458,21 +462,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		AD6AFEFB2B9DA8280099AA8A /* XCRemoteSwiftPackageReference "whisperlib" */ = {
+		AD4BE05C2BC1444D00E56C04 /* XCRemoteSwiftPackageReference "whisper-llama-lib" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MannaPlanet/whisperlib";
+			repositoryURL = "https://github.com/jangmino/whisper-llama-lib";
 			requirement = {
-				branch = dev_sync_upstream;
+				branch = main;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		AD6AFEFC2B9DA8280099AA8A /* whisperlib */ = {
+		AD4BE0602BC1452800E56C04 /* whisperllamalib */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = AD6AFEFB2B9DA8280099AA8A /* XCRemoteSwiftPackageReference "whisperlib" */;
-			productName = whisperlib;
+			package = AD4BE05C2BC1444D00E56C04 /* XCRemoteSwiftPackageReference "whisper-llama-lib" */;
+			productName = whisperllamalib;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

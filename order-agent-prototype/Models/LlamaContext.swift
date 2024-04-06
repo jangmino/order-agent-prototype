@@ -1,12 +1,12 @@
 //
 //  LlamaContext.swift
-//  manna-order-genie
+//  order-agent-prototype
 //
 //  Created by 오장민 on 3/7/24.
 //
 
 import Foundation
-import whisperlib
+import whisperllamalib
 
 enum LlamaError: Error {
     case couldNotInitializeContext
