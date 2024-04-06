@@ -2,7 +2,7 @@
 //  ContentView.swift
 //  order-agent-prototype
 //
-//  Created by 오장민 on 3/6/24.
+//  Created by a Developer on 3/6/24.
 //
 
 import SwiftUI
@@ -12,24 +12,24 @@ import whisperllamalib
 struct ContentView: View {
     @StateObject var whisperState: WhisperState
     @StateObject var llamaState: LlamaState
-    
-    @State private var multiLineText = "<start_of_turn>user\n너는 사용자가 입력한 주문 문장을 분석하는 에이전트이다. 주문으로부터 이를 구성하는 음식명, 옵션명, 수량을 차례대로 추출해야 한다.\n주문 문장:짜장면 한그릇하고요. 코카콜라 500ml 한병이요.<end_of_turn>\n<start_of_turn>model\n"
+        
+    private var debug_order_text = "페퍼로니피자 미디엄 사이즈 1개랑 복숭아 티 1잔하구요. 버팔로윙 6개 주세요."
     
     init(isdummy:Bool = false) {
         _whisperState = StateObject(wrappedValue: WhisperState(isdummy: isdummy))
-        _llamaState = StateObject(wrappedValue: LlamaState(isdummy: isdummy))
+        _llamaState = StateObject(wrappedValue: LlamaState(isdummy: isdummy, model_type: "gemma"))
     }
     
     var body: some View {
         NavigationStack {
             VStack {
                 HStack {
-                    
                     Button(whisperState.isRecording ? "음성 주문 종료" : "음성 주문 시작", action: {
                         Task {
                             llamaState.generatedText = ""
                             await whisperState.toggleRecord()
                             if whisperState.transcripedText != "" {
+//                                await llamaState.complete(text: debug_order_text)
                                 await llamaState.complete(text: whisperState.transcripedText)
                             }
                         }
@@ -39,17 +39,22 @@ struct ContentView: View {
                     .disabled(!whisperState.canTranscribe)
                 }
                 .padding()
+                Divider()
                 
                 VStack {
                     Text(whisperState.transcripedText)
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundStyle(.blue)
+                        .padding()
                     
                     Text(llamaState.generatedText)
                         .font(.system(size: 14, weight: .semibold))
                         .foregroundStyle(.red)
                 }
+                .frame(minHeight: 200)
                 .padding()
+                
+                Divider()
                 
                 ScrollView {
                     Text(whisperState.messageLog)
@@ -57,6 +62,7 @@ struct ContentView: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding()
                 }
+                .frame(minHeight: 70)
                 
                 ScrollView(.vertical, showsIndicators: true) {
                     Text(llamaState.messageLog)
@@ -67,14 +73,7 @@ struct ContentView: View {
                             UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                         }
                 }
-//
-//                
-//                HStack {
-//                    Button("Send") {
-//                        sendText()
-//                    }
-//                    .buttonStyle(.bordered)
-//                }
+                .frame(minHeight: 230)
                 
             }
             .navigationTitle("Order Agent Prototype")
@@ -86,14 +85,7 @@ struct ContentView: View {
             }
         }
     }
-    
-    func sendText() {
-        Task {
-//            await llamaState.complete(text: llm_prefix + multiLineText + "<end_of_turn>\n<start_of_turn>model\n")
-            await llamaState.complete(text: whisperState.transcripedText)
-//            multiLineText = ""
-        }
-    }
+
 }
 
 #Preview {

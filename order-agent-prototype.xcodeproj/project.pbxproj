@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AD4BE04A2BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD4BE0492BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf */; };
-		AD4BE04C2BC13F3000E56C04 /* ggml-small.q3_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD4BE04B2BC13F3000E56C04 /* ggml-small.q3_k.bin */; };
 		AD4BE0612BC1452800E56C04 /* whisperllamalib in Frameworks */ = {isa = PBXBuildFile; productRef = AD4BE0602BC1452800E56C04 /* whisperllamalib */; };
+		AD4BE06B2BC1A8C300E56C04 /* gemma-2b-it-Q4_K_M.gguf in Resources */ = {isa = PBXBuildFile; fileRef = AD4BE06A2BC1A8C300E56C04 /* gemma-2b-it-Q4_K_M.gguf */; };
+		AD4BE06D2BC2127D00E56C04 /* whisper-small.q4_k.bin in Resources */ = {isa = PBXBuildFile; fileRef = AD4BE06C2BC2127D00E56C04 /* whisper-small.q4_k.bin */; };
 		AD5136512B99561C00D5B85F /* LlamaContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136502B99561C00D5B85F /* LlamaContext.swift */; };
 		AD5136532B99566900D5B85F /* LlamaState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5136522B99566900D5B85F /* LlamaState.swift */; };
 		ADC3F24E2B98034000697A78 /* manna_order_genieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADC3F24D2B98034000697A78 /* manna_order_genieApp.swift */; };
@@ -23,8 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		AD4BE0492BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it-Q3_K_M.gguf"; sourceTree = "<group>"; };
-		AD4BE04B2BC13F3000E56C04 /* ggml-small.q3_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "ggml-small.q3_k.bin"; sourceTree = "<group>"; };
+		AD4BE06A2BC1A8C300E56C04 /* gemma-2b-it-Q4_K_M.gguf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gemma-2b-it-Q4_K_M.gguf"; sourceTree = "<group>"; };
+		AD4BE06C2BC2127D00E56C04 /* whisper-small.q4_k.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = "whisper-small.q4_k.bin"; sourceTree = "<group>"; };
 		AD5136502B99561C00D5B85F /* LlamaContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaContext.swift; sourceTree = "<group>"; };
 		AD5136522B99566900D5B85F /* LlamaState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LlamaState.swift; sourceTree = "<group>"; };
 		ADC3F24A2B98034000697A78 /* order-agent-prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "order-agent-prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -140,8 +140,8 @@
 		ADC3F27A2B98513900697A78 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				AD4BE04B2BC13F3000E56C04 /* ggml-small.q3_k.bin */,
-				AD4BE0492BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf */,
+				AD4BE06C2BC2127D00E56C04 /* whisper-small.q4_k.bin */,
+				AD4BE06A2BC1A8C300E56C04 /* gemma-2b-it-Q4_K_M.gguf */,
 				ADC3F28F2B98D81E00697A78 /* .gitignore */,
 			);
 			path = models;
@@ -219,10 +219,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD4BE06B2BC1A8C300E56C04 /* gemma-2b-it-Q4_K_M.gguf in Resources */,
 				ADC3F2552B98034100697A78 /* Preview Assets.xcassets in Resources */,
-				AD4BE04A2BC13DC900E56C04 /* gemma-2b-it-Q3_K_M.gguf in Resources */,
+				AD4BE06D2BC2127D00E56C04 /* whisper-small.q4_k.bin in Resources */,
 				ADC3F2522B98034100697A78 /* Assets.xcassets in Resources */,
-				AD4BE04C2BC13F3000E56C04 /* ggml-small.q3_k.bin in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,7 +378,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "order-agent-prototype/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Manna Order Genie";
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Agent Prototype";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access in order to transcribe speech.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -414,7 +414,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "order-agent-prototype/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "Manna Order Genie";
+				INFOPLIST_KEY_CFBundleDisplayName = "Order Agent Prototype";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "This app requires microphone access in order to transcribe speech.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
