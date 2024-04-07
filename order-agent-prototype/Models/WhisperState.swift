@@ -17,13 +17,7 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
     private var isdummy: Bool = false
     
     private var modelUrl: URL? {
-        Bundle.main.url(forResource: "ggml-small.q3_k", withExtension: "bin", subdirectory: ".")
-//        Bundle.main.url(forResource: "ggml-medium.q4_k", withExtension: "bin", subdirectory: ".")
-//        Bundle.main.url(forResource: "ggml-base-q5_1", withExtension: "bin", subdirectory: ".")
-    }
-    
-    private var sampleUrl: URL? {
-        Bundle.main.url(forResource: "jfk", withExtension: "wav", subdirectory: ".")
+        Bundle.main.url(forResource: "whisper-small.q4_k", withExtension: "bin", subdirectory: ".")
     }
     
     private enum LoadError: Error {
@@ -73,14 +67,6 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
 //        }
 //    }
     
-    func transcribeSample() async {
-        if let sampleUrl {
-            await transcribeAudio(sampleUrl)
-        } else {
-            messageLog += "Could not locate sample\n"
-        }
-    }
-    
     private func transcribeAudio(_ url: URL) async {
         if (!canTranscribe) {
             return
@@ -91,7 +77,6 @@ class WhisperState: NSObject, ObservableObject, AVAudioRecorderDelegate {
         
         do {
             canTranscribe = false
-            messageLog += "Reading wave samples...\n"
             let data = try readAudioSamples(url)
             messageLog += "Transcribing data...\n"
             await whisperContext.fullTranscribe(samples: data)
