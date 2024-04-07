@@ -1,0 +1,7 @@
+{
+    "model_name": "google/gemma-2b-it",
+    "dataset_name": "./data/food-order-understanding-sample-3k.json",
+    "model_type": "gemma",
+    "output_dir": "./output/gemma2b-food-order-understanding",
+    "eval_result_file": "./evaluation/eval-gemma.pkl"
+}
