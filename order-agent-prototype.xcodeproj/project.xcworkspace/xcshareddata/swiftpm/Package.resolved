@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "whisper-llama-lib",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jangmino/whisper-llama-lib",
+      "state" : {
+        "branch" : "main",
+        "revision" : "ef40e6fe4af6a51b236fe05fa3f8824fd48658d8"
+      }
+    }
+  ],
+  "version" : 2
+}
