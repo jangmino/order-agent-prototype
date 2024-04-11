@@ -90,7 +90,7 @@ python source/eval_general-food_order_understanding.py ./run-eval-args.json
   - 디코더 기반 트랜스포머 모델을 C++ 포팅
   - 미세 튜닝된 모델의 양자화 수행에 필요
   - `./order-agent-prototype/Resources/models/` 에 양자화된 모델 추가해야 함 (예: `gemma-2b-it-Q4_K_M.gguf`)
-- [스위프트 패키지: whisper-llama-lib](https://github.com/jangmino/whisper-llama-lib)
-  - whisper.cpp 와 llama.cpp의 핵심 모듈을 스위프트 패키지로 래핑
+- [Swift 패키지: whisper-llama-lib](https://github.com/jangmino/whisper-llama-lib)
+  - whisper.cpp 와 llama.cpp의 핵심 모듈을 Swift 패키지로 래핑
   - 음성 인식 과정과 분석 결과 생성을 위해 필요
 
