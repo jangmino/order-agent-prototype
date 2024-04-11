@@ -30,7 +30,7 @@
 - 템플릿 파일에서 `{0}` 부분은 실제 음식명 중에서 무작위로 40개를 샘플링하여 콤마로 구분하여 대체함
 - API를 통해 `gpt-4` 모델을 활용하여 30,000 여개의 주문-분석 예제 데이터셋을 생성
 
-전체 데이터셋의 일부인 [3,000 여개의 샘플 데이터셋](train_and_eval/data/food-order-understanding-sample-3k.json)을 공개
+전체 데이터셋의 일부인 [3,000 여개의 샘플 데이터셋](train_and_eval/data/food-order-understanding-sample-3k.json)을 공개 (참고: 전체 데이터셋의 완전 공개는 리포지터리 소유자와 개별 협의하여 확인할 수 있음)
 - 예시
     ```json
     {
@@ -78,7 +78,7 @@ python source/eval_general-food_order_understanding.py ./run-eval-args.json
 # 온디바이스 프로토타입 앱
 
 [Swift UI Xcode 프로젝트](order-agent-prototype.xcodeproj)
-- 아이폰 15 프로에서 구동 확인
+- 아이폰 14 프로에서 구동 확인
 
 ## 빌드 필요 조건
 
